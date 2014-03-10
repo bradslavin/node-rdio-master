@@ -52,6 +52,23 @@ module.exports = function(config, oauth) {
 		getRequestToken4: function(callback) {
 			oa.getOAuthRequestToken(callback);
 		},
+		testFunction: function(callback) {
+		  var y;
+		  
+		  switch (x) {
+		    case 1:
+		      y = x;
+		      break;
+		    case 2:
+		      y = x * 4;
+		      break;
+		    default:
+		      y = 0;
+		      break;
+		  }
+		  
+		  return y;
+		},
 		getPlaybackToken: function(auth_token, auth_token_secret, host, callback) {
 			this.api(
 				auth_token,
