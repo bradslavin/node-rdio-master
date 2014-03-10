@@ -25,6 +25,7 @@ module.exports = function(config, oauth) {
 	config.rdio_oauth_access = 'http://api.rdio.com/oauth/access_token';
 	config.rdio_oauth_auth = 'https://www.rdio.com/oauth/authorize?oauth_token=';
 	config.rdio_api = 'http://api.rdio.com/1/';
+	config.rdio_oauth_access = 'http://api.rdio.com/oauth/access_token';
 	
 	//setup oauth
 	var oa = new oauth(
@@ -39,8 +40,17 @@ module.exports = function(config, oauth) {
 		getRequestToken: function(callback) {
 			oa.getOAuthRequestToken(callback);
 		},
+		getRequestToken2: function(callback) {
+			oa.getOAuthRequestToken(callback);
+		},
+		getRequestToken3: function(callback) {
+			oa.getOAuthRequestToken(callback);
+		},
 		getAccessToken: function(auth_token, auth_token_secret, oauth_verifier, callback) {
 			oa.getOAuthAccessToken(auth_token, auth_token_secret, oauth_verifier, callback);
+		},
+		getRequestToken4: function(callback) {
+			oa.getOAuthRequestToken(callback);
 		},
 		getPlaybackToken: function(auth_token, auth_token_secret, host, callback) {
 			this.api(
